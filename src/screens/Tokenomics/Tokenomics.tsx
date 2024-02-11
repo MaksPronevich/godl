@@ -7,11 +7,11 @@ import { TokenomicsProps } from "./Tokenomics.props";
 
 export const Tokenomics = ({ selectPage }: TokenomicsProps): JSX.Element => {
 	return (
-		<section className="bg-sky overflow-hidden">
-			<div className="relative mx-auto min-h-screen max-w-[1246px] px-4 pb-[40px] pt-[12%] lg:pt-[8%]">
+		<section className="overflow-hidden">
+			<div className="relative mx-auto max-w-[1246px] px-4 pt-[15%] lg:min-h-screen lg:pb-[40px] lg:pt-[8%]">
 				<div className="flex flex-col items-center justify-between gap-4 lg:flex-row lg:items-end">
 					<div className="max-w-[690px] text-center lg:flex-[0_1_690px] lg:text-left">
-						<h1 className="font-comic mb-6 text-5xl font-bold uppercase md:text-[64px]/[70px]">
+						<h1 className="mb-6 font-comic text-5xl font-bold uppercase md:text-[64px]/[70px]">
 							Tokenomics
 						</h1>
 						<p className="text-xl md:text-2xl">
@@ -25,7 +25,7 @@ export const Tokenomics = ({ selectPage }: TokenomicsProps): JSX.Element => {
 									className="h-[50px] w-[50px] sm:h-[90px] sm:w-[90px]"
 									alt="Dogl"
 								/>
-								<div className="font-comic flex flex-col items-start">
+								<div className="flex flex-col items-start font-comic">
 									<span className="text-2xl text-white">Token Supply:</span>
 									<span className="text-[25px] uppercase sm:text-[38px]">1 Billion GODLs</span>
 								</div>
@@ -41,12 +41,12 @@ export const Tokenomics = ({ selectPage }: TokenomicsProps): JSX.Element => {
 							their piece of the pie.
 						</p>
 					</div>
-					<div>
-						<img src={dogImg} alt="Dog" />
+					<div className="relative mx-auto w-full max-w-[450px] pb-[60%] lg:pb-[30%]">
+						<img src={dogImg} className="absolute h-full w-full object-contain" alt="Gold" />
 					</div>
 				</div>
-				<Socials className="mx-auto mt-[123px] flex lg:hidden" />
-				<div className="mt-10 flex w-full flex-col items-center justify-between gap-4 md:flex-row md:gap-3 lg:mt-[210px]">
+
+				<div className="mt-10 hidden w-full flex-col items-center justify-between gap-4 md:flex-row md:gap-3 lg:mt-[210px] lg:flex">
 					<NavigationButton reverse onClick={() => selectPage(1)}>
 						introduction
 					</NavigationButton>

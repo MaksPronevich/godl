@@ -8,18 +8,29 @@ export const App = () => {
 
 	const selectPage = (pageNumber: number) => {
 		window.scrollTo({ top: 0 });
-
 		setPageNumber(pageNumber);
 	};
 
-	switch (pageNumber) {
-		case 1:
-			return <Intro selectPage={selectPage} />;
-		case 2:
-			return <Tokenomics selectPage={selectPage} />;
-		case 3:
-			return <Roadmap selectPage={selectPage} />;
-		default:
-			return <Intro selectPage={selectPage} />;
-	}
+	const components: Record<number, JSX.Element> = {
+		1: <Intro selectPage={selectPage} />,
+		2: <Tokenomics selectPage={selectPage} />,
+		3: <Roadmap selectPage={selectPage} />,
+	};
+
+	const componentToRender = components.hasOwnProperty(pageNumber) ? (
+		components[pageNumber]
+	) : (
+		<Intro selectPage={selectPage} />
+	);
+
+	return (
+		<>
+			<div className="hidden lg:block">{componentToRender}</div>
+			<div className="block lg:hidden">
+				<Intro selectPage={selectPage} />
+				<Tokenomics selectPage={selectPage} />
+				<Roadmap selectPage={selectPage} />
+			</div>
+		</>
+	);
 };

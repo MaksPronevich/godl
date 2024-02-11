@@ -6,17 +6,17 @@ import pawImg from "../../assets/img/paw.svg";
 
 export const Roadmap = ({ selectPage }: RoadmapProps): JSX.Element => {
 	return (
-		<section className="bg-orange overflow-hidden">
-			<div className="relative mx-auto min-h-screen max-w-[1310px] px-4 pb-[40px] pt-[12%] lg:pt-[8%]">
+		<section className="overflow-hidden">
+			<div className="relative mx-auto min-h-screen max-w-[1310px] px-4 pb-[40px] pt-[15%] lg:pt-[8%]">
 				<div className="flex flex-col-reverse items-start justify-between gap-4 lg:flex-row">
-					<div className="mx-auto">
-						<img src={goldImg} className="max-w-[90%]" alt="Gold" />
+					<div className="relative mx-auto w-full max-w-[600px] pb-[70%] lg:pb-[46%]">
+						<img src={goldImg} className="absolute h-full w-full object-contain" alt="Gold" />
 					</div>
-					<div className="mx-auto max-w-[660px] text-center lg:flex-[0_1_660px] lg:text-left">
-						<h1 className="font-comic mb-6 text-5xl font-bold uppercase text-white md:text-[64px]/[70px]">
+					<div className="mx-auto w-full max-w-[660px] text-center lg:text-left">
+						<h1 className="mb-6 font-comic text-5xl font-bold uppercase md:text-[64px]/[70px]">
 							Roadmap to Riches
 						</h1>
-						<div className="text-xl text-white md:text-2xl">
+						<div className="text-xl md:text-2xl">
 							<p>We have but one goal in our roadmap.</p>
 							<br className="hidden md:block" />
 							<p>1. Take over the Base Chain as the pioneer meme coin.</p>
@@ -36,11 +36,11 @@ export const Roadmap = ({ selectPage }: RoadmapProps): JSX.Element => {
 						</div>
 					</div>
 				</div>
-				<div className="mt-[80px] flex max-w-[660px] flex-col-reverse items-center justify-between gap-6 sm:flex-row sm:gap-3 lg:mt-[60px]">
-					<NavigationButton reverse onClick={() => selectPage(2)}>
+				<div className="mt-[100px] flex flex-col-reverse items-center justify-between gap-6 sm:flex-row sm:gap-3 lg:mt-[60px] lg:max-w-[660px]">
+					<NavigationButton reverse onClick={() => selectPage(2)} className="hidden lg:flex">
 						Tokenomics
 					</NavigationButton>
-					<Socials />
+					<Socials className="mx-auto" />
 				</div>
 				<img
 					src={pawImg}

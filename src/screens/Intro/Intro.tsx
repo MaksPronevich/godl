@@ -20,7 +20,7 @@ export const Intro = ({ selectPage }: IntroProps): JSX.Element => {
 		}, 500);
 	};
 	return (
-		<section className="bg-orange overflow-hidden">
+		<section className="overflow-hidden">
 			<div className="relative mx-auto min-h-screen max-w-[1132px] px-4 pb-[40px] pt-[8%]">
 				<div className="flex flex-col items-start justify-between gap-4 lg:flex-row">
 					<div className="relative z-30 mx-auto mb-6 lg:mb-0">
@@ -32,10 +32,10 @@ export const Intro = ({ selectPage }: IntroProps): JSX.Element => {
 						<Button className="-mt-[25px] hidden lg:flex" />
 					</div>
 					<div className="mx-auto max-w-[660px] text-center lg:text-left">
-						<h1 className="font-comic mb-6 text-5xl font-bold uppercase text-white md:text-[64px]/[70px]">
+						<h1 className="mb-6 font-comic text-5xl font-bold uppercase md:text-[64px]/[70px]">
 							Welcome to the GODLEN Age
 						</h1>
-						<div className="text-base text-white md:text-xl/6">
+						<div className="text-base md:text-xl/6">
 							<p>
 								GODL is the pioneer meme coin on Base, where the golden rays of prosperity shine
 								upon the loyal. 
@@ -46,7 +46,7 @@ export const Intro = ({ selectPage }: IntroProps): JSX.Element => {
 								the promised land of gains.
 							</p>
 							<div className="relative mx-auto my-6 max-w-[400px] rounded-2xl p-[4px] [background:linear-gradient(90deg,#FF0401_0%,#EE00FF_15%,#0000FF_33%,#00EBFF_49.5%,#00FF23_67%,#FFFF00_82.5%,#FF0400_100%)] sm:max-w-full">
-								<div className="bg-orange flex items-center justify-between gap-2 rounded-xl px-5 py-3 text-black">
+								<div className="flex items-center justify-between gap-2 rounded-xl bg-sky px-5 py-3 text-black">
 									<div className="hidden truncate sm:block">
 										<span className="text-[19px] md:text-[19px]">{tokenAddress}</span>
 									</div>
@@ -79,7 +79,7 @@ export const Intro = ({ selectPage }: IntroProps): JSX.Element => {
 							</p>
 						</div>
 						<Button className="mx-auto mt-6 flex lg:hidden" />
-						<div className="mt-[140px] flex flex-col items-center justify-between gap-6 sm:flex-row sm:gap-3">
+						<div className="mt-[140px] hidden flex-col items-center justify-between gap-6 sm:flex-row sm:gap-3 lg:flex">
 							<Socials />
 							<NavigationButton onClick={() => selectPage(2)}>Tokenomics</NavigationButton>
 						</div>
