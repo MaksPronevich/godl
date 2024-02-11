@@ -1,30 +1,71 @@
-# React + TypeScript + Vite
+# GODL
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing for GODL token
 
-Currently, two official plugins are available:
+## Technologies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project uses the following technologies:
 
-## Expanding the ESLint configuration
+- `React` - the library for web and native user interfaces
+- `TypeScript` - the JavaScript with syntax for types
+- `tailwindcss` - CSS framework that can be composed to build any design, directly in your markup
+- `Vite` - a build tool
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Installation
 
-- Configure the top-level `parserOptions` property like this:
+This project uses the `yarn` package manager.
+To get started, you will need yarn installed globally on your machine. You can do this with the following command:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+`   npm install --global yarn`
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+After this, you need to install all the dependencies in the project. You can do this with the following command in project folder:
+
+`    yarn install` or
+`    yarn`
+
+After successful installation, you can proceed to the instructions
+
+## Instructions
+
+| Command           | Description                       |
+| ----------------- | --------------------------------- |
+| `yarn dev`        | start the development server      |
+| `yarn lint`       | run eslint scanner                |
+| `yarn lint --fix` | run eslint scanner and fix errors |
+| `yarn test`       | run tests                         |
+| `yarn preview`    | locally preview production build  |
+| `yarn build`      | build to production               |
+
+## Used packages
+
+Packages for React:
+
+- `react`
+- `react-dom`
+
+Packages for TypeScript:
+
+- `typescript`
+- `@types/react`
+- `@types/react-dom`
+- `@typescript-eslint/eslint-plugin`
+- `@typescript-eslint/parser`
+
+Packages for tailwindcss:
+
+- `tailwindcss`
+- `postcss`
+- `autoprefixer`
+
+To find and fix problems in your code:
+
+- `eslint`
+- `eslint-plugin-prettier`
+- `eslint-plugin-react-refresh`
+- `eslint-plugin-prettier`
+- `eslint-plugin-simple-import-sort`
+
+To format code:
+
+- `prettier`
+- `prettier-plugin-tailwindcss`
